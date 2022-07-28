@@ -58,6 +58,8 @@ Function InstallAzPowerShellModule
 
 }
 InstallAzPowerShellModule
+New-Item "C:\Users\demouser\cloudlabs-common" -itemType Directory
+Copy-Item -Path C:\Packages\Plugins\Microsoft.Compute.CustomScriptExtension\1.10.12\Downloads\0\cloudlabs-common\cloudlabs-windows-functions.ps1 -Destination C:\Users\demouser\cloudlabs-common\cloudlabs-windows-functions.ps1 -Force
 
 #Import Common Functions
 $path = pwd
@@ -155,7 +157,6 @@ Function InstallSQLSMS
 
 #Install Postman
 choco install postman
-
 
 
 
