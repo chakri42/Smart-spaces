@@ -87,8 +87,8 @@ Connect-AzAccount -Credential $cred | Out-Null
 $RG=Get-AzResourceGroup 
 $RGName=$RG.ResourceGroupName
 
-
-Connect-AzureAD
+Install-Module AzureAD -Force
+Connect-AzureAD -Credential $cred
 $ObjId = (Get-AzureADUser -Filter "UserPrincipalName eq '$AzureUserName'").ObjectId
 
 
